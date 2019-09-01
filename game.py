@@ -27,3 +27,10 @@ def guess_number(drawn, min_d, max_d):
         else:
             print(f'Zgadłeś liczbę {drawn}, za {counter} razem.')
             break
+
+def start_game():
+    min_nr, max_nr = get_user_range()
+    random_nr = get_random_number_from_range(min_nr, max_nr)
+    guess_number(random_nr, min_nr, max_nr)
+
+start_game()
